@@ -41,9 +41,8 @@ Ensure you have the following installed and available in your system path:
 ## Getting Started
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/brati-biswas-hyland/fcc-cf-perf-test.git
-   cd fcc-cf-perf-test```
+	   git clone https://github.com/brati-biswas-hyland/fcc-cf-perf-test.git
+	   cd fcc-cf-perf-test
 2. **Review the test data**:
 	Open `testdata.csv` to inspect test parameter values. Customize if needed to adapt to your target environment.
 
@@ -51,19 +50,20 @@ Ensure you have the following installed and available in your system path:
 
 You can run the JMeter test plan in non-GUI mode to save resources and generate reports automatically. Here's a sample command (modify the paths and parameters as needed):
 
-```jmeter -n \
-  -t "cfs_consumerapi_perftestsuite_v2.0.jmx" \
-  -JBaseUrl=https://api.cfs.staging.experience.hyland.com \
-  -JUserCount=10 \
-  -JConnectionId=YOUR_CONNECTION_ID_HERE \
-  -l results.jtl \
-  -e \
-  -o "reports"```
+
+	  jmeter.bat -n \
+	  -t "C:\cfs_consumerapi_perftestsuite_v2.0.jmx" \
+	  -JBaseUrl=https://api.cfs.staging.experience.hyland.com \
+	  -JUserCount=10 \
+	  -JConnectionId=YOUR_CONNECTION_ID_HERE \
+	  -l results.jtl \
+	  -e \
+	  -o "C:\html\reports"
 
 
 **Parameters Explained**:
 
-```-n: Non-GUI (command-line) mode
+-n: Non-GUI (command-line) mode
 
 -t: Path to the JMX test plan
 
@@ -77,7 +77,8 @@ You can run the JMeter test plan in non-GUI mode to save resources and generate 
 
 -e: Flag to generate the report dashboard
 
--o: Directory where the HTML report will be saved```
+-o: Directory where the HTML report will be saved
+
 
 ## Test Configuration
 
@@ -87,7 +88,9 @@ You can run the JMeter test plan in non-GUI mode to save resources and generate 
 
 ## Results & Reporting
 
-**After executing the test with -e -o, JMeter will generate an HTML dashboard in your reports directory. You can open index.html in a browser to explore metrics such as:**
+
+After executing the test with `-e -o`, JMeter will generate an HTML dashboard in your reports directory. You can open `index.html` in a browser to explore metrics such as:
+
 Response time distributions
 Throughput graphs
 Error rates
