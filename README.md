@@ -1,1 +1,2 @@
 # fcc-cf-perf-test
+Command to run the test suite in Non-GUI mode: C:\apache-jmeter-5.5\bin\jmeter.bat -n -t "C:\cfs_consumerapi_perftestsuite_v2.0.jmx" -JBaseUrl=api.cfs.staging.experience.hyland.com -JUserCount=1 -JConnectionId=1fe91bc7-14ed-4c94-a37e-7e50d69745c0 -l results.jtl -e -o "C:\reports"
