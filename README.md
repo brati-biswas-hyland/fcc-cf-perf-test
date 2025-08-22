@@ -50,6 +50,7 @@ Ensure you have the following installed and available in your system path:
 
 You can run the JMeter test plan in non-GUI mode to save resources and generate reports automatically. Here's a sample command (modify the paths and parameters as needed):
 
+
 	  jmeter.bat -n \
 	  -t "C:\cfs_consumerapi_perftestsuite_v2.0.jmx" \
 	  -JBaseUrl=https://api.cfs.staging.experience.hyland.com \
@@ -59,6 +60,26 @@ You can run the JMeter test plan in non-GUI mode to save resources and generate 
 	  -e \
 	  -o "C:\html\reports"
 
+
+**Parameters Explained**:
+
+-n: Non-GUI (command-line) mode
+
+-t: Path to the JMX test plan
+
+-JBaseUrl: Base API endpoint to test
+
+-JUserCount: Number of concurrent users to simulate
+
+-JConnectionId: Unique connection/session identifier
+
+-l: Output file for results (JMeter .jtl format)
+
+-e: Flag to generate the report dashboard
+
+-o: Directory where the HTML report will be saved
+
+
 ## Test Configuration
 
 **To customize the test:**
@@ -67,7 +88,9 @@ You can run the JMeter test plan in non-GUI mode to save resources and generate 
 
 ## Results & Reporting
 
+
 After executing the test with `-e -o`, JMeter will generate an HTML dashboard in your reports directory. You can open `index.html` in a browser to explore metrics such as:
+
 Response time distributions
 Throughput graphs
 Error rates
